@@ -1,0 +1,230 @@
+.menu {
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  .menu__topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 6.25rem;
+    border-bottom: 0.125rem solid #D2D2D2;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .menu__conteudo {
+    max-width: 72rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.75rem 1.88rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu__navegacao {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+
+      list-style: none;
+
+      li {
+        &:hover {
+          color: #912b2e;
+        }
+      }
+    }
+
+    .menu__icones {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.56rem;
+
+      a>svg {
+        width: 25px;
+        height: 25px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carrinho {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        svg {
+          width: 30px;
+          height: 30px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        div {
+          width: 1.3125rem;
+          height: 1.125rem;
+          background-color: #CB4471;
+          color: #fff;
+          font-size: 0.75rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 9999px;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    &:hover .dropdown__content {
+      display: block;
+    }
+
+    .dropdown__content {
+      background-color: #fff;
+      width: 100%;
+      position: absolute;
+      padding: 12px 120px;
+      z-index: 1;
+
+      .dropdown__menu {
+        max-width: 72rem;
+        width: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        gap: 1rem;
+        font-size: 0.85rem;
+
+        a {
+          &:hover {
+            color: #912b2e;
+          }
+        }
+      }
+    }
+  }
+
+  .menu__mobile {
+    background-color: #F3E3DC;
+    border-right: 1px solid #cecece;
+    width: 15rem;
+    z-index: 998;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  
+    .titulo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-bottom: 1px solid #cecece;
+      background-color: #CB4471;
+  
+      h2 {
+        color: #ffffff;
+        font-family: Poppins;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+  
+      p {
+        color: #eeeeee;
+        font-family: Poppins;
+        font-size: 0.80rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+  
+    ul {
+      padding: 1rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    li {
+      font-size: 1rem;
+  
+      &:hover {
+        color: #912b2e;
+      }
+    }
+
+    .colecoes__mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    
+      li {
+        list-style: square;
+        font-size: 0.85rem;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    .menu__topo {
+      a>svg {
+        padding: 0.4rem;
+      }
+    }
+
+    .menu__conteudo {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      border-top: 1px solid #D2D2D2;
+      background: #FFF;
+    }
+
+    .menu__navegacao {
+      display: none !important;
+    }
+
+    .menu__icones {
+      width: 100%;
+      justify-content: space-evenly !important;
+    }
+
+
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .menu__mobile_icon {
+    display: none;
+  }
+}
+

@@ -1,0 +1,124 @@
+.carrinho__item {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .item__infos {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    max-width: 75%;
+
+    .quantidade {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+      color: rgba(0, 0, 0, 0.70);
+      font-family: Poppins;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      span {
+        display: flex;
+        gap: 1rem;
+        font-size: 1rem;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+      }
+    }
+
+
+    img {
+      width: 4.6875rem;
+      height: 100px;
+      border-radius: 0.3125rem;
+      border: 1px solid #D2D2D2;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        color: #1C1C1C;
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+
+      span {
+        color: #1C1C1C;
+        font-size: 0.775rem;
+
+        button {
+          background: none;
+          border: none;
+          outline: none;
+          color: rgba(0, 0, 0, 0.70);
+          font-size: 0.775rem;
+          font-weight: 400;
+
+          &:hover {
+            color: #1C1C1C;
+          }
+        }
+      }
+    }
+  }
+
+  .item__preco {
+    color: #1C1C1C;
+    font-size: 1rem;
+    width: 25%;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carrinho__item {
+      flex-direction: column; 
+      gap: 0.5rem; 
+
+      padding-bottom: 1rem;
+
+      .item__infos {
+        flex-direction: column;
+        max-width: 100%;
+        .item__image {
+          display: flex;
+          width: 290px;
+        
+          img {
+            width: 290px;
+            height: 357px;
+          }
+        }
+
+        div {
+          .quantidade {
+            margin: 0.5rem 0;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .item__preco {
+        color: #1C1C1C;
+        font-size: 1rem;
+        width: 100% !important;
+        display: flex;
+        justify-content: center !important;
+      }
+  }
+  
+}

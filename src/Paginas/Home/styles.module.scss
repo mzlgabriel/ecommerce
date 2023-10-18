@@ -1,0 +1,110 @@
+
+main {
+  .colecoes__destaque {
+    margin: 3.125rem 0;
+    color: #fff;
+    padding: 0 1.88rem;
+
+    .colecoes__container {
+      max-width: 72rem;
+      width: 100%;
+      gap: 20px;
+
+      display: grid;
+      margin: 0 auto;
+      grid-template:
+        "a c c"
+        "b c c";
+
+      .colecoes__container_item {
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        padding: 1.25rem;
+      }
+
+      .item__a {
+        grid-area: a;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6334131064535189) 37%, rgba(255, 255, 255, 0) 100%), url('../../assets/colecoes/colecao1.png');
+        height: 13rem;
+      }
+
+      .item__b {
+        grid-area: b;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6334131064535189) 37%, rgba(255, 255, 255, 0) 100%), url('../../assets/colecoes/colecao2.png');
+        height: 13rem;
+      }
+
+      .item__c {
+        grid-area: c;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6334131064535189) 37%, rgba(255, 255, 255, 0) 100%), url('../../assets/colecoes/colecao3.png');
+      }
+    }
+  }
+
+  .produtos__destaque {
+    padding: 3.13rem 1.88rem;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .informativo {
+      h3 {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    
+      p {
+        color: #000;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  
+    .produtos__destaque_container {
+      max-width: 72rem;
+      width: 100%;
+      margin: 1.88rem 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .colecoes__destaque {
+    margin: 1.88rem !important;
+    padding: 0 !important;
+    
+    .colecoes__container {
+      grid-template:
+        "a"
+        "b"
+        "c" !important;
+
+      .item__c {
+        height: 13rem;
+      }
+    }
+  }
+
+  .produtos__destaque {
+    border-radius: 3.125rem 3.125rem 0rem 0rem !important;
+    padding-top: 2rem !important;
+
+    .informativo {
+      text-align: center;
+
+      h3 {
+        font-size: 1.25rem !important;
+      }
+      p {
+        font-size: 0.85rem !important;
+      }
+    }
+  }
+}

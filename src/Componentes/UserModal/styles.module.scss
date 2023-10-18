@@ -1,0 +1,126 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #d2d2d2;
+  min-width: 15rem;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0.5rem;
+  color: #000;
+  font-size: 1.1rem;
+  top: 1.65rem;
+  left: -6.5rem;
+
+  .user {
+    padding: 0.94rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #d2d2d2;
+    margin-bottom: 0.75rem;
+    
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+    }
+  }
+
+  .user__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    ul {
+      list-style: none;
+
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.dropdown_link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.dropdown_link:hover {
+  cursor: pointer;
+}
+
+.dropdown_content a {
+  padding: 1rem;
+}
+
+.dropdown_content a:hover {
+  color: #912b2e;
+}
+
+.dropdown_content a:not(:last-child) {
+  border-bottom: 0.063rem solid #D9EBFB;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .user {
+    justify-content: space-between;
+  }
+  .dropdown_content {
+    width: 19rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: scroll;
+    height: calc(100vh - 45px);
+    display: none;
+    padding: 0 !important;
+
+    background-color: #f9f9f9;
+    border: none;
+    min-width: 100% !important;
+    box-shadow: none !important;
+    border-radius: 0rem;
+    color: #000;
+    top: 0;
+    left: 0;
+  }
+
+  .carrinho_padding {
+    padding: 1rem;
+  }
+}

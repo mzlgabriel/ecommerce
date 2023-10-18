@@ -1,0 +1,170 @@
+.login {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login__flex {
+    display: grid;
+    grid-template-columns: 0.7fr 0.1fr 0.7fr;
+    border-radius: 0.3125rem;
+    background: #FFF;
+    box-shadow: 0px 3px 17px 6px rgba(0, 0, 0, 0.25);
+    padding: 3.13rem;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .linha {
+      width: 1px;
+      background: #000;
+      opacity: 0.1;
+
+      margin: 0 auto;
+    }
+
+    .login__input_grupo {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: #1B1B1B;
+        font-size: 0.875rem;
+      }
+
+      input {
+        border-radius: 0.3125rem;
+        border: 1px solid rgba(0, 0, 0, 0.50);
+        background: #FFF;
+        color: #000;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.7rem;
+        outline: none;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .login__botao {
+      button {
+        border-radius: 0.3125rem;
+        background: #CB4471;
+        color: #FFF;
+        font-size: 0.875rem;
+        font-weight: 400;
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+
+    h2 {
+      color: #000;
+      font-size: 1.125rem;
+      font-weight: 400;
+
+      margin-bottom: 1.3rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 1.8rem;
+
+      li {
+        color: #000;
+        font-family: Poppins;
+        font-size: 0.85rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .login__form {
+      
+      .login__checkbox {
+        margin-bottom: 1rem;
+      }
+
+      .login__recuperacao_senha {
+        color: #1B1B1B;
+        font-family: Poppins;
+        font-size: 0.8125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        margin-top: 0.94rem;
+      }
+    }
+  }
+}
+
+.registrar {
+  display: flex;
+  flex-direction: column;
+
+  .login__input_grupo {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: #1B1B1B;
+      font-size: 0.875rem;
+    }
+
+    input {
+      border-radius: 0.3125rem;
+      border: 1px solid rgba(0, 0, 0, 0.50);
+      background: #FFF;
+      color: #000;
+      font-size: 0.875rem;
+      padding: 0.5rem 0.7rem;
+      outline: none;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .login__botao {
+    button {
+      border-radius: 0.3125rem;
+      background: #CB4471;
+      color: #FFF;
+      font-size: 0.875rem;
+      font-weight: 400;
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.formModal {
+  padding: 1.325rem;
+}
+
+.termos {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+
+  span {
+    color: #CB4471;
+  }
+}
+
+.obrigatorio {
+  color: #FF0000;
+}
+
+@media only screen and (max-width: 768px) {
+  .login {
+    height: 100% !important;
+    padding: 3.125rem 3rem;
+    
+    .login__flex {
+      grid-template-columns: 1fr;
+
+      .linha {
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
+}
